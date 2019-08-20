@@ -61,11 +61,19 @@ class App extends Component {
             return 'draw';
         }
     }
+
+    handleSubmit = (e) => {
+        window.location.reload();
+    }
+
     render() {
         return (
             <div id='game'>
                 <div id='head'>
                 Tic Tac Toe
+                </div>
+                <div id='con'>
+                Powered By Pramuditha
                 </div> 
                 <div id='board' onClick={(e)=>this.clicked(e)}>
                     <div className='square'data-square="0"></div>
@@ -80,6 +88,11 @@ class App extends Component {
                 </div>
                 <div id='status'>
                 {this.state.winnerLine}
+                </div>
+                <div>
+                    <button id="new" onClick={this.handleSubmit}>
+                        New Game
+                    </button>    
                 </div> 
             </div>
         )
