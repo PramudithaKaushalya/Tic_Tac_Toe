@@ -2,6 +2,7 @@
   "name": "myreact",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://PramudithaKaushalya.github.io/tictacturing",
   "dependencies": {
     "@babel/core": "7.1.6",
     "@material-ui/core": "^3.9.1",
