@@ -16,13 +16,19 @@ class App extends Component {
     }
     clicked(e) {
         if(this.state.board[e.target.dataset.square] === ''){
-            this.state.board[e.target.dataset.square] = this.state.turn;
+            //this.state.board[e.target.dataset.square] = this.state.turn;
+
+            let newState = Object.assign({}, this.state);
+            newState.board[e.target.dataset.square] = this.state.turn;
+            this.setState(newState);
+
             e.target.innerText = this.state.turn;
             let totalMoves=this.state.totalMoves;
             this.setState({
                 turn: this.state.turn === 'X' ? 'O' : 'X',
                 board: this.state.board,
-                totalMoves: totalMoves+1
+                totalMoves: totalMoves+1,
+                
             })
         }
         var result = this.check();

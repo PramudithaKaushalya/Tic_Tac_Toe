@@ -4,10 +4,26 @@
     box-sizing: border-box;
 }
 
+html{
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: url(/img/background1.jpg) no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    min-height: 100%;
+  }
+
 #board {
     display: flex;
     width: 450px;
     flex-wrap: wrap;
+    background-color: aliceblue;
 }
 
 .square {
@@ -33,7 +49,7 @@
 }
 
 #head {
-    font-size: 75px;
+    font-size: 55px;
     padding: 20px;
     color: blue;
 }
@@ -45,7 +61,7 @@
 }
 
 #status {
-    font-size: 50px;
+    font-size: 40px;
     padding: 20px;
     color: red;
 }
@@ -56,9 +72,11 @@
     height: 50px;
     width: 150px;
     padding: 5px;
-    background-color: aquamarine;
+    background-color: rgb(7, 234, 250);
 }
-
+.new:hover {
+    background: #eee;
+}
 .square:nth-child(1), .square:nth-child(2), .square:nth-child(3) {
     border-top: 0;
 }
